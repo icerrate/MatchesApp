@@ -34,12 +34,19 @@ public class MainActivity extends AppCompatActivity {
         mViewPager = findViewById(R.id.view_pager);
         mTabsLayout = findViewById(R.id.tabs);
 
+        initTabs();
+        initToolbar();
+    }
+
+    private void initTabs() {
         mTabsAdapter = new TabsAdapter(getSupportFragmentManager());
-        mTabsAdapter.addFragment(ViewConfigurator.fixturesFragment(), "Fixtures");
-        mTabsAdapter.addFragment(ViewConfigurator.resultsFragment(), "Results");
+        mTabsAdapter.addFragment(ViewConfigurator.fixturesFragment(), getString(R.string.tab_fixtures));
+        mTabsAdapter.addFragment(ViewConfigurator.resultsFragment(), getString(R.string.tab_results));
         mViewPager.setAdapter(mTabsAdapter);
         mTabsLayout.setupWithViewPager(mViewPager);
+    }
 
+    private void initToolbar() {
         mToolbar.setTitle(getString(R.string.app_name));
         setSupportActionBar(mToolbar);
     }
