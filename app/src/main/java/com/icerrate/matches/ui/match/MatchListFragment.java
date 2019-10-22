@@ -22,8 +22,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.icerrate.matches.R;
 import com.icerrate.matches.data.model.Match;
-import com.icerrate.matches.ui.match.fixture.FixtureListListAdapter;
-import com.icerrate.matches.ui.match.result.ResultListListAdapter;
+import com.icerrate.matches.ui.match.fixture.FixtureListAdapter;
+import com.icerrate.matches.ui.match.result.ResultListAdapter;
 
 import java.util.List;
 
@@ -82,10 +82,10 @@ public class MatchListFragment extends Fragment implements MatchContract.View {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         switch (matchType) {
             case Match.RESULTS_TYPE:
-                mAdapter = new ResultListListAdapter();
+                mAdapter = new ResultListAdapter();
                 break;
             case Match.FIXTURE_TYPE: default:
-                mAdapter = new FixtureListListAdapter();
+                mAdapter = new FixtureListAdapter();
                 break;
         }
         mAdapter.setFilterListener(new MatchListAdapter.FilterListener() {

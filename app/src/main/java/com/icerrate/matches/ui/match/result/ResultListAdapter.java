@@ -18,7 +18,7 @@ import com.icerrate.matches.utils.DateUtils;
 /**
  * @author icerrate
  */
-public class ResultListListAdapter extends MatchListAdapter<ResultListListAdapter.ResultHolder> {
+public class ResultListAdapter extends MatchListAdapter<ResultListAdapter.ResultHolder> {
 
     @NonNull
     @Override
@@ -54,9 +54,9 @@ public class ResultListListAdapter extends MatchListAdapter<ResultListListAdapte
 
     public static class ResultHolder extends MatchHolder {
 
-        TextView homeTeamScoreTextView;
+        public TextView homeTeamScoreTextView;
 
-        TextView awayTeamScoreTextView;
+        public TextView awayTeamScoreTextView;
 
         public ResultHolder(View v) {
             super(v);
