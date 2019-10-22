@@ -20,16 +20,17 @@ import com.icerrate.matches.utils.DateUtils;
 /**
  * @author icerrate
  */
-public class FixtureListListAdapter extends MatchListAdapter<FixtureListListAdapter.FixtureHolder> {
+public class FixtureListAdapter extends MatchListAdapter<FixtureListAdapter.FixtureHolder> {
 
+    @NonNull
     @Override
-    public FixtureListListAdapter.FixtureHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public FixtureListAdapter.FixtureHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fixture, parent, false);
         return new FixtureHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FixtureListListAdapter.FixtureHolder holder, int position) {
+    public void onBindViewHolder(@NonNull FixtureListAdapter.FixtureHolder holder, int position) {
         super.onBindViewHolder(holder, position);
         final Match match = mFilteredItems.get(position);
         Context context = holder.competitionTextView.getContext();
@@ -57,11 +58,11 @@ public class FixtureListListAdapter extends MatchListAdapter<FixtureListListAdap
 
     public class FixtureHolder extends MatchHolder {
 
-        TextView stateTextView;
+        public TextView stateTextView;
 
-        TextView dayNumberTextView;
+        public TextView dayNumberTextView;
 
-        TextView dayNameTextView;
+        public TextView dayNameTextView;
 
         public FixtureHolder(View v) {
             super(v);
