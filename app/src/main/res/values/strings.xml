@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Matches</string>
+
+    <string name="search_action">Search</string>
+    <string name="tab_fixtures">Fixtures</string>
+    <string name="tab_results">Results</string>
+    <string name="no_data_found">No Data Found</string>
+
+    <string name="place_date">%1$s | %2$s</string>
+
+    <string name="month_year_holder">September 2019</string>
+    <string name="competition_holder">Champions League</string>
+    <string name="place_date_holder">Stanford Bridge | Sep 12, 2019 at 20:00</string>
+    <string name="state_holder">Postponed</string>
+    <string name="home_team_holder">Chelsea FC</string>
+    <string name="away_team_holder">Qarabag</string>
+    <string name="day_number_holder">12</string>
+    <string name="day_name_holder">TUE</string>
+    <string name="home_team_score_holder">2</string>
+    <string name="away_team_score_holder">0</string>
+
+</resources>

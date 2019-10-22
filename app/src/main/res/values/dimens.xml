@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="tab_indicator_height">3dp</dimen>
+    <dimen name="divider_width">1dp</dimen>
+    <dimen name="small_margin">4dp</dimen>
+    <dimen name="right_space">84dp</dimen>
+    <dimen name="month_year_padding">22dp</dimen>
+    <dimen name="line">1dp</dimen>
+    <dimen name="divider_height">80dp</dimen>
+
+    <dimen name="state_text_size">10sp</dimen>
+    <dimen name="day_text_size">28sp</dimen>
+    <dimen name="score_text_size">22sp</dimen>
+    <dimen name="month_year_text_size">26sp</dimen>
+</resources>

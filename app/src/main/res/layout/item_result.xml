@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/month_year"
+        style="@style/BoldText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/month_year_padding"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/month_year_padding"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/month_year_text_size"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/month_year_holder" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/activity_horizontal_margin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/competition"
+        style="@style/BoldText"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="@string/competition_holder"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/month_year" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/place_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        style="@style/TextAppearance.AppCompat.Caption"
+        tools:text="@string/place_date_holder"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/competition" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/home_team"
+        style="@style/BoldText"
+        android:layout_width="0dp"
+        android:textColor="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        tools:text="@string/home_team_holder"
+        app:layout_constraintBottom_toTopOf="@id/away_team"
+        app:layout_constraintEnd_toStartOf="@id/home_team_score"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/place_date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/away_team"
+        style="@style/BoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        tools:text="@string/away_team_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/away_team_score"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/home_team" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/home_team_score"
+        style="@style/RegularText"
+        android:textSize="@dimen/score_text_size"
+        android:layout_width="@dimen/right_space"
+        android:textColor="@color/blue"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:gravity="center"
+        tools:text="@string/home_team_score_holder"
+        app:layout_constraintBottom_toTopOf="@id/away_team"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/place_date" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/away_team_score"
+        style="@style/RegularText"
+        android:textSize="@dimen/score_text_size"
+        android:layout_width="@dimen/right_space"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:gravity="center"
+        tools:text="@string/away_team_score_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home_team_score" />
+
+    <View
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/away_team_score" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
